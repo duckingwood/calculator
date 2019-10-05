@@ -1,8 +1,7 @@
 // Simple arithmetic calculator app
 
 /**
- * Write some pseudo code steps here.
- * Use those steps as your `commit` messages (and delete them from here as you complete a step.)
+2. listen for a 'submit' event on the '<form>'
  */
 
 function add(a, b) {
@@ -24,3 +23,13 @@ function divide(a, b) {
 function remainder(a, b) {
   return a % b;
 }
+
+const form = document.querySelector("form");
+
+// use an anonymous callback function as the 2nd arguement
+form.addEventListener("submit", function(event) {
+  // Prevent the default browser behavior DON'T submit
+  event.preventDefault();
+
+  console.log("submitted!");
+});
